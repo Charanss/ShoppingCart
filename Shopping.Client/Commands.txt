@@ -1,0 +1,33 @@
+
+
+
+Mogngo DB
+--------------------------------------------------------
+https://hub.docker.com/ -- Download the Mongo DB images from Docker Hub
+1) docker pull mongo -->Download image to local docker
+2) docker run --name some-mongo -d mongo:tag  -->Creates container
+
+Query mongo db which is in container. We have to use interactive terminal which is power shell.Here we create collections and data in mongo db
+1) Docker exec –it  mongodb_name bash
+example:Docker exec –it shop-mongo bash
+
+Mongosh --> use this to enter the mongo bash
+Show dbs --> Lists all databases
+Use catalogdb --> creates new database catalogdb
+db.createCollection('Products')
+----------Show Collections-------
+show collections
+--------Insert Records----------
+db.Products.insertMany([{'Name':'Asus Laptop','Category':'Computers','Summary':'Summary','Description':'Description','ImageFile':'ImageFile','Price':54.93},{'Name':'HP Laptop','Category':'Computers','Summary':'Summary','Description':'Description','ImageFile':'ImageFile','Price':88.93}])
+------Select command----------
+db.Products.find({}).pretty()
+--------Remove all data-----
+db.Products.remove({}).pretty()
+
+
+LPE non examined report
+item status = nv
+
+
+
+

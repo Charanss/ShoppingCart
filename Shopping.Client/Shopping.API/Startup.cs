@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Shopping.API.Data;
 namespace Shopping.API
 {
     public class Startup
@@ -31,6 +31,7 @@ namespace Shopping.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shopping.API", Version = "v1" });
             });
+            services.AddScoped<ProductContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
