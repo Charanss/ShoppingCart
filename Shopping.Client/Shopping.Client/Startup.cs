@@ -25,7 +25,8 @@ namespace Shopping.Client
             //Consuming the webAPI.
             services.AddHttpClient("ShoppingAPIClient", client =>
             {
-                client.BaseAddress = new Uri("http://localhost:5500"); // Shopping.API url     
+                //localhost:8000 is changed to container nmae shoppingapi which is defined in the yaml overide file
+                client.BaseAddress = new Uri("http://shoppingapi"); // Shopping.API url     
                 //client.BaseAddress = new Uri(Configuration["ShoppingAPIUrl"]);
             });
            

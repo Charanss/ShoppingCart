@@ -1,4 +1,4 @@
-
+Check the container you are connecting to and use the commands.There can be many containers
 
 
 Mogngo DB
@@ -6,14 +6,16 @@ Mogngo DB
 https://hub.docker.com/ -- Download the Mongo DB images from Docker Hub
 1) docker pull mongo -->Download image to local docker
 2) docker run --name some-mongo -d mongo:tag  -->Creates container
+docker run -d -p 27017:27017 --name shopdb mongo
 
 Query mongo db which is in container. We have to use interactive terminal which is power shell.Here we create collections and data in mongo db
-1) Docker exec –it  mongodb_name bash
+1) Docker exec –it  shopdb bash
 example:Docker exec –it shop-mongo bash
 
-Mongosh --> use this to enter the mongo bash
-Show dbs --> Lists all databases
-Use catalogdb --> creates new database catalogdb
+mongosh --> use this to enter the mongo bash
+show dbs --> Lists all databases
+show databases
+use catalogdb --> creates new database catalogdb
 db.createCollection('Products')
 ----------Show Collections-------
 show collections

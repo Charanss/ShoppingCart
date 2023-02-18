@@ -14,7 +14,5 @@ services:
       dockerfile: Shopping.Client/Dockerfile
 
   shopping.db:
-    image: mongo
-    build:
-      context: .
-      dockerfile: Shopping.Client/Dockerfile
+    image: mongo #database name
+   
