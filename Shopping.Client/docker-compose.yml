@@ -14,5 +14,5 @@ services:
       dockerfile: Shopping.Client/Dockerfile
 
   shopping.db:
-    image: mongo #database name
+    image: mongo #mong image name which is already pulled in the docker.
    
